@@ -10,6 +10,8 @@
     ../../modules/nixos
   ];
 
+  custom.nvidia.enable = true;
+
   networking.hostName = "nixos-btw";
 
   programs.zsh.enable = true;
