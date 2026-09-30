@@ -14,7 +14,6 @@
     docker
     redis
     openssl
-    dart
     flutter
   ];
 }
