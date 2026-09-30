@@ -18,6 +18,7 @@
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/shell.nix
     ../../modules/home-manager/spicetify.nix
+    ../../modules/home-manager/gnome-extensions.nix
     ../../modules/nixos/gtk-theme.nix
   ];
 
