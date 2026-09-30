@@ -1,11 +1,10 @@
-{ pkgs, inputs, ... }:
-
-let
-  sys = pkgs.stdenv.hostPlatform.system;
-  zen-browser = inputs.zen-browser.packages."${sys}".default;
-  helium = inputs.helium.packages."${sys}".default;
-in
 {
+  pkgs,
+  inputs,
+  ...
+}: let
+  sys = pkgs.stdenv.hostPlatform.system;
+in {
   home.packages = with pkgs; [
     nix-prefetch-git
     unzip
@@ -14,8 +13,8 @@ in
     timg
     nautilus
     ghostty
-    zen-browser
-    helium
+    inputs.zen-browser.packages.${sys}.default
+    inputs.helium.packages.${sys}.default
     telegram-desktop
     discord
     vim
@@ -23,6 +22,7 @@ in
     amberol
     yazi
     waybar
+    quickshell
     rofi
     hyprshot
     hyprpaper

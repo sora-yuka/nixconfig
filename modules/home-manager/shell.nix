@@ -9,14 +9,19 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch";
-      show = "fastfetch";
-      fastapi = "echo 'with import <nixpkgs> {}; mkShell { NIX_LD_LIBRARY_PATH = lib.makeLibraryPath [ stdenv.cc.cc ]; NIX_LD = lib.fileContents \"\${stdenv.cc}/nix-support/dynamic-linker\"; shellHook = \"export LD_LIBRARY_PATH=$NIX_LD_LIBRARY_PATH\"; }' > shell.nix && echo 'use nix' > .envrc && direnv allow";
+      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw";
+      fastapi = "nix flake init -t /etc/nixos#fastapi && direnv allow";
     };
 
     initContent = ''
       unsetopt nomatch
     '';
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
   };
 
   programs.oh-my-posh = {
