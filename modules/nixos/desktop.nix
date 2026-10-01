@@ -7,7 +7,7 @@
 in {
   networking.networkmanager.enable = true;
 
-  services.displayManager.ly.enable = true;
+  services.displayManager.gdm.enable = true;
 
   programs.dconf.enable = true;
 
