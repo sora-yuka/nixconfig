@@ -10,7 +10,11 @@
     ../../modules/nixos
   ];
 
-  custom.nvidia.enable = false;
+  custom.nvidia = {
+    enable = true;
+    open = false;
+    package = "legacy_580";
+  };
 
   networking.hostName = "nixos-btw";
 

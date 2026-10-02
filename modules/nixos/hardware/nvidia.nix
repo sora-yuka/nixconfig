@@ -27,6 +27,13 @@ in {
       '';
     };
 
+    package = lib.mkOption {
+      type = lib.types.str;
+      default = "stable";
+      example = "legacy_580";
+      description = "Attribute name indside boot.kernelPackages.nvidiaPackages.";
+    };
+
     prime = {
       intelBusId = lib.mkOption {
         type = lib.types.nullOr lib.types.str;
@@ -56,7 +63,7 @@ in {
       modesetting.enable = true; # needed for Wayland/Hyprland
       open = cfg.open;
       nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.${cfg.package};
 
       # Fixes broken/black screen after suspend
       powerManagement.enable = true;
