@@ -15,6 +15,7 @@
 
     initContent = ''
       unsetopt nomatch
+      bindkey '^H' backward-kill-word
     '';
   };
 
