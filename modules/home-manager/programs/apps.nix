@@ -18,6 +18,7 @@ in {
     telegram-desktop
     discord
     vim
+    tree
     gapless
     amberol
     yazi
@@ -26,11 +27,12 @@ in {
     rofi
     hyprshot
     hyprpaper
+    hyprlock
     cava
     nwg-look
     pavucontrol
     cine
+    playerctl
     whatsie
-    google-cursor
   ];
 }
