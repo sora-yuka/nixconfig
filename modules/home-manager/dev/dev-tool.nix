@@ -9,5 +9,6 @@
     redis
     openssl
     flutter
+    gccNGPackages_15.libstdcxx
   ];
 }

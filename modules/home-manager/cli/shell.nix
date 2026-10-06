@@ -10,7 +10,9 @@
 
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw";
-      fastapi = "nix flake init -t /etc/nixos#fastapi && direnv allow";
+      clib = "nix flake init -t /etc/nixos#clib && direnv allow";
+      u = "uv init --no-package .";
+      ur = "uv run";
     };
 
     initContent = ''

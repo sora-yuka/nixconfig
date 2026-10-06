@@ -34,10 +34,10 @@
     # `nix fmt` formats every .nix file in the repo.
     formatter.${system} = pkgs.alejandra;
 
-    # `nix flake init -t /etc/nixos#fastapi` in a project directory.
-    templates.fastapi = {
-      path = ./templates/fastapi;
-      description = "FastAPI dev shell (libstdc++ via LD_LIBRARY_PATH) + direnv";
+    # `nix flake init -t /etc/nixos#clib` in a project directory.
+    templates.clib = {
+      path = ./templates/clib;
+      description = "Dev shell to handle C libs (libstdc++ via LD_LIBRARY_PATH) + direnv";
     };
   };
 }
