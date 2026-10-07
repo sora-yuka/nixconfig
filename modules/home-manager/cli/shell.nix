@@ -11,7 +11,8 @@
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw";
       clib = "nix flake init -t /etc/nixos#clib && direnv allow";
-      u = "uv init --no-package .";
+      ui = "uv init --no-package .";
+      ud = "uv add";
       ur = "uv run";
     };
 
