@@ -39,5 +39,11 @@
       path = ./templates/clib;
       description = "Dev shell to handle C libs (libstdc++ via LD_LIBRARY_PATH) + direnv";
     };
+
+    # `nix flake init -t /etc/nixos#flutter` in a project directory.
+    templates.flutter = {
+      path = ./templates/flutter;
+      description = "Dev shell work with flutter and android";
+    };
   };
 }
