@@ -8,7 +8,6 @@
     gnumake
     redis
     openssl
-    flutter
     virtualenv
   ];
 }
