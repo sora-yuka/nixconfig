@@ -13,4 +13,9 @@
     LC_TELEPHONE = "ky_KG";
     LC_TIME = "en_US.UTF-8";
   };
+ 
+  services.xserver.xkb = {
+    layout = "us,ru";
+    options = "grp:shift_caps_toggle";
+  };
 }
