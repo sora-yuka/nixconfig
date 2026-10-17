@@ -14,5 +14,6 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.iosevka
     nerd-fonts.meslo-lg
+    times-newer-roman
   ];
 }
