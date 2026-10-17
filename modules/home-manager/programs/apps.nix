@@ -34,5 +34,6 @@ in {
     cine
     playerctl
     whatsie
+    onlyoffice-desktopeditors
   ];
 }
