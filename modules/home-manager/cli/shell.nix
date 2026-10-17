@@ -11,7 +11,8 @@
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw";
       clib = "nix flake init -t /etc/nixos#clib && direnv allow";
-      ui = "uv init --no-package .";
+      flutt = "nix flake init -t /etc/nixos#flutter";
+      ui = "uv init --no-package";
       ud = "uv add";
       ur = "uv run";
     };
@@ -26,6 +27,7 @@
     enable = true;
     enableZshIntegration = true;
     nix-direnv.enable = true;
+    config.global.hide_env_diff = true;
   };
 
   programs.oh-my-posh = {
